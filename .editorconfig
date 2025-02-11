@@ -328,7 +328,7 @@ dotnet_diagnostic.IDE0062.severity = warning
 
 # IDE0073: File header
 dotnet_diagnostic.IDE0073.severity = warning
-file_header_template = Licensed to the .NET Foundation under one or more agreements.\nThe .NET Foundation licenses this file to you under the MIT license.
+file_header_template = Copyright (c) 2025 MVP Conf Brazil\nMIT License - see LICENSE.md for details
 
 # IDE0161: Convert to file-scoped namespace
 dotnet_diagnostic.IDE0161.severity = warning
@@ -474,3 +474,8 @@ indent_style = unset
 insert_final_newline = false
 tab_width = unset
 trim_trailing_whitespace = false
+
+[*.{generated,g}.cs]
+generated_code = true
+dotnet_style_* = none
+dotnet_analyzer_diagnostic.category-Style.severity = none

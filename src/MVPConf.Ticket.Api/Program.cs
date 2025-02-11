@@ -1,3 +1,6 @@
+// Copyright (c) 2025 MVP Conf Brazil
+// MIT License - see LICENSE.md for details
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -35,7 +38,7 @@ app.MapGet("/weatherforecast", () =>
 
 app.Run();
 
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
+internal sealed record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 {
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 }
